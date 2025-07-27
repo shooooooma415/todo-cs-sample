@@ -39,14 +39,14 @@ namespace TodoApi.Services
             {
                 return new Todo
                 {
-                    Id = reader.GetGuid("Id"),
-                    Title = reader.GetString("Title"),
-                    Description = reader.IsDBNull("Description") ? null : reader.GetString("Description"),
-                    Status = reader.GetString("Status"),
-                    Priority = reader.GetString("Priority"),
-                    DueDate = reader.IsDBNull("DueDate") ? null : reader.GetDateTime("DueDate"),
-                    CreatedAt = reader.GetDateTime("CreatedAt"),
-                    UpdatedAt = reader.GetDateTime("UpdatedAt")
+                    Id = reader.GetGuid(reader.GetOrdinal("Id")),
+                    Title = reader.GetString(reader.GetOrdinal("Title")),
+                    Description = reader.IsDBNull(reader.GetOrdinal("Description")) ? null : reader.GetString(reader.GetOrdinal("Description")),
+                    Status = reader.GetString(reader.GetOrdinal("Status")),
+                    Priority = reader.GetString(reader.GetOrdinal("Priority")),
+                    DueDate = reader.IsDBNull(reader.GetOrdinal("DueDate")) ? null : reader.GetDateTime(reader.GetOrdinal("DueDate")),
+                    CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                    UpdatedAt = reader.GetDateTime(reader.GetOrdinal("UpdatedAt"))
                 };
             }
 
@@ -73,14 +73,14 @@ namespace TodoApi.Services
             {
                 return new Todo
                 {
-                    Id = reader.GetGuid("Id"),
-                    Title = reader.GetString("Title"),
-                    Description = reader.IsDBNull("Description") ? null : reader.GetString("Description"),
-                    Status = reader.GetString("Status"),
-                    Priority = reader.GetString("Priority"),
-                    DueDate = reader.IsDBNull("DueDate") ? null : reader.GetDateTime("DueDate"),
-                    CreatedAt = reader.GetDateTime("CreatedAt"),
-                    UpdatedAt = reader.GetDateTime("UpdatedAt")
+                    Id = reader.GetGuid(reader.GetOrdinal("Id")),
+                    Title = reader.GetString(reader.GetOrdinal("Title")),
+                    Description = reader.IsDBNull(reader.GetOrdinal("Description")) ? null : reader.GetString(reader.GetOrdinal("Description")),
+                    Status = reader.GetString(reader.GetOrdinal("Status")),
+                    Priority = reader.GetString(reader.GetOrdinal("Priority")),
+                    DueDate = reader.IsDBNull(reader.GetOrdinal("DueDate")) ? null : reader.GetDateTime(reader.GetOrdinal("DueDate")),
+                    CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                    UpdatedAt = reader.GetDateTime(reader.GetOrdinal("UpdatedAt"))
                 };
             }
 
@@ -106,14 +106,14 @@ namespace TodoApi.Services
             {
                 todos.Add(new Todo
                 {
-                    Id = reader.GetGuid("Id"),
-                    Title = reader.GetString("Title"),
-                    Description = reader.IsDBNull("Description") ? null : reader.GetString("Description"),
-                    Status = reader.GetString("Status"),
-                    Priority = reader.GetString("Priority"),
-                    DueDate = reader.IsDBNull("DueDate") ? null : reader.GetDateTime("DueDate"),
-                    CreatedAt = reader.GetDateTime("CreatedAt"),
-                    UpdatedAt = reader.GetDateTime("UpdatedAt")
+                    Id = reader.GetGuid(reader.GetOrdinal("Id")),
+                    Title = reader.GetString(reader.GetOrdinal("Title")),
+                    Description = reader.IsDBNull(reader.GetOrdinal("Description")) ? null : reader.GetString(reader.GetOrdinal("Description")),
+                    Status = reader.GetString(reader.GetOrdinal("Status")),
+                    Priority = reader.GetString(reader.GetOrdinal("Priority")),
+                    DueDate = reader.IsDBNull(reader.GetOrdinal("DueDate")) ? null : reader.GetDateTime(reader.GetOrdinal("DueDate")),
+                    CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                    UpdatedAt = reader.GetDateTime(reader.GetOrdinal("UpdatedAt"))
                 });
             }
 
@@ -142,14 +142,14 @@ namespace TodoApi.Services
             {
                 todos.Add(new Todo
                 {
-                    Id = reader.GetGuid("Id"),
-                    Title = reader.GetString("Title"),
-                    Description = reader.IsDBNull("Description") ? null : reader.GetString("Description"),
-                    Status = reader.GetString("Status"),
-                    Priority = reader.GetString("Priority"),
-                    DueDate = reader.IsDBNull("DueDate") ? null : reader.GetDateTime("DueDate"),
-                    CreatedAt = reader.GetDateTime("CreatedAt"),
-                    UpdatedAt = reader.GetDateTime("UpdatedAt")
+                    Id = reader.GetGuid(reader.GetOrdinal("Id")),
+                    Title = reader.GetString(reader.GetOrdinal("Title")),
+                    Description = reader.IsDBNull(reader.GetOrdinal("Description")) ? null : reader.GetString(reader.GetOrdinal("Description")),
+                    Status = reader.GetString(reader.GetOrdinal("Status")),
+                    Priority = reader.GetString(reader.GetOrdinal("Priority")),
+                    DueDate = reader.IsDBNull(reader.GetOrdinal("DueDate")) ? null : reader.GetDateTime(reader.GetOrdinal("DueDate")),
+                    CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                    UpdatedAt = reader.GetDateTime(reader.GetOrdinal("UpdatedAt"))
                 });
             }
 

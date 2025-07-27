@@ -1,6 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using TodoApi.Data;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,7 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // TodoServiceをDIコンテナに登録
-builder.Services.AddScoped<TodoService>();
+builder.Services.AddScoped<TodoApi.Services.TodoService>();
 
 var app = builder.Build();
 
