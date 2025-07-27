@@ -1,8 +1,21 @@
+using Microsoft.EntityFrameworkCore;
+using TodoApi.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// コントローラーサービスを追加
+builder.Services.AddControllers();
+
+// Swagger/OpenAPI を追加
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// TodoServiceをDIコンテナに登録
+builder.Services.AddScoped<TodoService>();
 
 var app = builder.Build();
 
@@ -10,9 +23,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
+
+// コントローラーをマップする
+app.MapControllers();
 
 var summaries = new[]
 {
